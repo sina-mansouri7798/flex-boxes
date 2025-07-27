@@ -1,103 +1,150 @@
 <!DOCTYPE html>
 <html lang="fa">
-    <head>
-        <meta charset="UTF-8" />
-        <title>telephone</title>
-        <style>
-            body 
-            {
-                font-family: Tahoma, sans-serif;
-                background-color: #282c34;
-                color: #61dafb;
-                direction: rtl;
-                margin: 0;
-                padding: 30px;
-            }
-            h1
-            {
-                text-align: center;
-                margin-bottom: 40px;
-            }
-            .container
-            {
-                display: flex;
-                gap: 20px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .box
-            {
-                width:250px;
-                background-color: rgb(32, 20, 54);
-                border-radius: 20px;
-                font-size:20px;
-                color: rgb(17, 181, 187);
-                text-align: center;
-                padding:20px;
-                box-shadow: 0 0 10px #1e90ff88;
-                transition: 0.5s;
-                
-            
-            }
-            .box:hover
-            {
-                transform:scale(1.03);
-            }
-            .box h2 
-            {
-                margin-top: 0;
-                color: #21a1f1;
-            }
-            ul 
-            {
-                padding-right: 15px;
-            }
-            ul li {
-                margin-bottom: 8px;
-            }
-            ul li a 
-            {
-                color: #61dafb;
-                text-decoration: none;
-                transition: color 0.2s ease;
-            }
-            ul li a:hover 
-            {
-                color: #21a1f1;
-            }
-             @media(max-width:600px)
-            {
-            .box
-            {
-               width:100%;
-            }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>روش های ارتباطی</h1>
-        <div class="container">
-            <div class="box">
-                <h2>روش های تلفنی</h2>
-                    <ul>
-                        <li>: موبایل </li>
-                        <li>: محل کار </li>
-                    </ul>    
-            </div>
-            <div class="box">
-                <h2>روش های اینترنتی</h2>
-                <ul>
-                    <li><a href="#">:ایمیل</a></li>
-                    <li><a href="#">:واتس اپ</a></li>
-                    <li><a href="#">: تلگرام</a></li> 
-                </ul>
-            </div>
-            <div class="box">
-                <h2>آدرس</h2>
-                <ul>
-                    <li>تهران....</li>
-                </ul>
-            </div>
-        </div>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>روش‌های ارتباطی</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background: linear-gradient(135deg, #1f1f2b, #2c2f39);
+      color: #61dafb;
+      direction: rtl;
+      margin: 0;
+      padding: 30px;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2em;
+      animation: fadeIn 1.2s ease forwards;
+      border-bottom: 2px dashed #21a1f1;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 260px;
+      background-color: #2c2e4d;
+      border-radius: 20px;
+      font-size: 18px;
+      color: #11cdd4;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 12px #00ffff55;
+      transition: 0.4s ease;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .box:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 20px #00bfff88;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #21a1f1;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .box h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 35%;
+      width: 30%;
+      height: 2px;
+      background-color: #21a1f1;
+      transition: width 0.3s ease;
+    }
+
+    .box:hover h2::after {
+      width: 70%;
+      right: 15%;
+    }
+
+    ul {
+      padding-right: 20px;
+      list-style-type: square;
+      text-align: right;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    ul li a {
+      color: #61dafb;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    ul li a:hover {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    @media(max-width:600px) {
+      .box {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>روش‌های ارتباطی</h1>
+  <div class="container">
+    <div class="box">
+      <h2>روش‌های تلفنی</h2>
+      <ul>
+        <li>موبایل</li>
+        <li>محل کار</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>روش‌های اینترنتی</h2>
+      <ul>
+        <li><a href="#">ایمیل</a></li>
+        <li><a href="#">واتس‌اپ</a></li>
+        <li><a href="#">تلگرام</a></li>
+      </ul>
+    </div>
+    <div class="box">
+      <h2>آدرس</h2>
+      <ul>
+        <li>تهران، خیابان مثال، پلاک 123</li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
