@@ -1,0 +1,83 @@
+<html>
+<head>
+  <title>ایمیل</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background: linear-gradient(120deg, #20232a, #282c34);
+      color: #61dafb;
+      direction: rtl;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .box {
+      margin:0 auto 0;
+      background-color: #3a3f47;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px #1e90ff88;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 0 15px #00bfff88;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #21a1f1;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    .box h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 2px;
+      background-color: #21a1f1;
+      transition: width 0.3s ease;
+    }
+
+    .box:hover h2::after {
+      width: 100%;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    a {
+      color: #61dafb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>ارتباط از طریق ایمیل</h1>
+  <div class="box">
+    <h2>ایمیل :</h2>
+    <p><a href="mailto:sinamansoouri84@gmail.com">sinamansoouri84@gmail.com</a></p>
+  </div>
+</body>
+</html>
